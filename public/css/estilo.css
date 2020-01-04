@@ -1,0 +1,175 @@
+.skin-blue .main-header .navbar {
+  /*background-color: #ffffff + #111;*/
+  background-color: transparent;
+}
+.wrapper {
+  background-color: #ffffff !important;
+}
+/*Color del sidbar*/
+.sidebar-menu,
+.main-sidebar .user-panel,
+.sidebar-menu > li.header {
+  background-color: #265699 !important;
+}
+.sidebar-mini.sidebar-collapse .main-sidebar {
+  background-color: #265699 !important;
+}
+.navbar-static-top {
+  background-color: transparent !important;
+  background: #ffffff;
+  background: -moz-linear-gradient(13deg, rgba(255, 255, 255, 0.89679622) 22%, rgba(255, 255, 255, 0) 55%, #265699 81%);
+  background: -webkit-linear-gradient(13deg, rgba(255, 255, 255, 0.89679622) 22%, rgba(255, 255, 255, 0) 55%, #265699 81%);
+  background: linear-gradient(13deg, rgba(255, 255, 255, 0.89679622) 22%, rgba(255, 255, 255, 0) 55%, #265699 81%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#265699", GradientType=1);
+}
+.skin-blue .main-header .logo {
+  background-color: #265699;
+}
+.skin-blue .wrapper,
+.skin-blue .main-sidebar,
+.skin-blue .left-side {
+  /*Color del sidbar y topbar*/
+}
+.skin-blue .sidebar-menu > li > .treeview-menu {
+  background-color: #265699;
+}
+.skin-blue .sidebar-menu > li:hover > a,
+.skin-blue .sidebar-menu > li.active > a,
+.skin-blue .sidebar-menu > li.menu-open {
+  background-color: #1A3966;
+}
+/**Menu de perfial*/
+.navbar-nav {
+  /*a{
+    color: #265699 !important;
+    font-weight: bold;
+    i{
+      color: #265699 !important;
+      font-weight: bold;
+    }
+  }*/
+}
+/********************************/
+/** Contednido */
+/*** DISEÑO PARA EL FONDO - TEXTURA*/
+.content-header {
+  /*margin-top: -15px;*/
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+.content-header h1 {
+  border-left: 5px solid #CC641F;
+  position: absolute;
+  padding-left: 15px;
+  margin-bottom: 25px;
+  border-radius: 0px 6px 6px 8px;
+}
+.logoxpagina {
+  width: 50%;
+}
+.content-wrapper {
+  background-color: #ffffff !important;
+  min-height: 900px !important;
+}
+.skin-blue .main-header li.user-header {
+  background-color: #265699 !important;
+}
+.skin-blue .sidebar-menu .treeview-menu > li > a {
+  color: #ffffff;
+}
+.skin-blue .sidebar-menu .treeview-menu > li > a:hover {
+  color: #BEE52E;
+}
+i {
+  color: #ffffff;
+}
+.treeview-menu a {
+  font-size: 0.9em !important;
+}
+.treeview-menu a i {
+  /*font-size: .9em !important;*/
+  margin-right: 5px;
+  /*margin-left: -10px;*/
+}
+.treeview-menu > li > a > .fa,
+.treeview-menu > li > a > .glyphicon,
+.treeview-menu > li > a > .ion {
+  width: auto !important;
+}
+.active {
+  color: lightgoldenrodyellow;
+}
+/***************/
+/*Inicio*/
+.paralelogramo {
+  width: 150px;
+  height: 100px;
+  border: 3px solid #555;
+  background: #428bca;
+  -webkit-transform: skew(20deg);
+  -moz-transform: skew(20deg);
+  -ms-transform: skew(20deg);
+  -o-transform: skew(20deg);
+  transform: skew(20deg);
+}
+.panel-heading i {
+  color: #222 !important;
+  margin-right: 7px !important;
+}
+.list-group-item i {
+  color: #1E7CE8 !important;
+  margin-right: 7px !important;
+}
+.panel {
+  border-radius: 0px !important;
+}
+.subtitulo-principal {
+  margin-top: 0px;
+  text-transform: uppercase;
+  color: #5E7DAA;
+}
+/** SOLO CAJAS*/
+.box {
+  border: 0px solid;
+  box-shadow: none;
+}
+/** Para listados */
+.list-group-item {
+  border: 0px;
+}
+/** Borde izquierdo para paneles*/
+.borde-izquierdo1 {
+  border-left: 3px dashed #eeeeee;
+}
+.main-header .sidebar-toggle {
+  color: #000 !important;
+}
+.main-header .sidebar-toggle:hover {
+  color: #000 !important;
+  background-color: transparent !important;
+}
+.main-header .logo:hover {
+  background-color: #222 !important;
+}
+.sidebar-menu > li > a {
+  color: #ffffff;
+  background-color: #1A3966;
+}
+.sidebar-collapse .sidebar-menu > li a {
+  color: #ffffff;
+  background-color: #265699;
+}
+/** PANEL PARA DESCRIOPCION **/
+.panel-para-descripcion .panel {
+  border: 0px;
+  box-shadow: none;
+}
+.panel-para-descripcion .panel-heading {
+  color: #1E7CE8;
+  text-transform: uppercase;
+  padding: 0px 15px;
+  border-bottom: 0px solid transparent;
+  background-color: transparent;
+  font-weight: bold;
+}
+/*# sourceMappingURL=estilo.css.map */

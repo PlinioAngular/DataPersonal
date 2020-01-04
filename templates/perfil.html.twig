@@ -1,0 +1,135 @@
+{% extends '/layout.html.twig' %}
+
+{% block body %}
+    <section class="content-header">
+        <h1>
+            <i class="fas fa-user-cog" style="color: #222222"></i>
+            {% if is_granted("ROLE_USER") %}
+                Usuario: {{ app.user.username }}
+            {% endif %}
+            <div class="pull-right">
+                {% if (app.user.id == 9) or (app.user.id == 238) or (app.user.id == 569) %}
+                    <a href="{{ path('registrados') }}" class="btn btn-info">Ver registrados</a>
+                {% endif %}
+                <a href="{{ path('fos_user_security_logout') }}" class="btn btn-success">Cerrar sesión</a>
+            </div>
+        </h1>
+    </section>
+
+    <section style="border-top: 5px solid #dddddd; margin: 20px; margin-top: 20px;"></section>
+    <section class="content container-fluid" style="padding-top: 0" >
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box box-body">
+                    <p>
+                        Mantenga actualizada su información personal, es muy importante para la empresa.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="box-body">
+                    {{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
+
+                    <div class="form-group" style="display: none">
+                        <label>E-mail</label>
+                        <input type="text" class="form-control" style="width: 100%;" readonly="readonly" value="{{ usuario.email }}"/>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.nombre, 'Nombre completo:', {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.nombre, {'attr': {'class': 'form-control'}}) }}
+                        <span class="help-block" style="color: brown">{{ form_errors(form.nombre) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.apellidopaterno, 'Apellido paterno:', {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.apellidopaterno, {'attr': {'class': 'form-control'}}) }}
+                        <span class="help-block" style="color: brown">{{ form_errors(form.apellidopaterno) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.apellidomaterno, 'Apellido materno:', {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.apellidomaterno, {'attr': {'class': 'form-control'}}) }}
+                        <span class="help-block" style="color: brown">{{ form_errors(form.apellidomaterno) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.fechanacimiento, 'Fecha de nacimiento: (día/mes/año)', {'label_attr': {'class': 'control-label'}}) }}
+
+                        <div class="row">
+                            <div class="col-md-12" style="margin: 0px">
+                                {{ form_widget(form.fechanacimiento.day, {'attr': {'class': 'form-control', 'style': 'float:left; margin-right: 10px'}}) }}
+                                {{ form_widget(form.fechanacimiento.month, {'attr': {'class': 'form-control', 'style': 'float:left; margin-right: 10px'}}) }}
+                                {{ form_widget(form.fechanacimiento.year, {'attr': {'class': 'form-control', 'style': 'float:left; margin-right: 10px'}}) }}
+                            </div>
+                        </div>
+
+                        <span class="help-block" style="color: brown">{{ form_errors(form.fechanacimiento) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.correo1, 'Correo personal', {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.correo1, {'attr': {'class': 'form-control'}}) }}
+                        <span class="help-block" style="color: brown">{{ form_errors(form.correo1) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.correo2, 'Correo corporativo (Formato con nombre), si tiene asignado; ej: nombre.apellido@sattelital.com.pe', {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.correo2, {'attr': {'class': 'form-control'}}) }}
+                        <span class="help-block" style="color: brown">{{ form_errors(form.correo2) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.correo3, 'Correo corporativo (Formato con cargo), si tiene asignado; ej: cargo@sattelital.com.pe', {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.correo3, {'attr': {'class': 'form-control'}}) }}
+                        <span class="help-block" style="color: brown">{{ form_errors(form.correo3) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.telefono1, 'Teléfono personal', {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.telefono1, {'attr': {'class': 'form-control'}}) }}
+                        <span class="help-block" style="color: brown">{{ form_errors(form.telefono1) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.telefono2, 'Teléfono corporativo "móvil, si tiene asignado"', {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.telefono2, {'attr': {'class': 'form-control'}}) }}
+                        <span class="help-block" style="color: brown">{{ form_errors(form.telefono2) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.telefono3, 'Teléfono corporativo "anexo", si tiene asignado', {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.telefono3, {'attr': {'class': 'form-control'}}) }}
+                        <span class="help-block" style="color: brown">{{ form_errors(form.telefono3) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(form.areageneral, 'Área general de pertenencia', {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(form.areageneral, {'attr': {'class': 'form-control'}}) }}
+                        <span class="help-block" style="color: brown">{{ form_errors(form.areageneral) }}</span>
+                    </div>
+
+                    <button class="btn btn-success">Guardar</button>
+                    {#<a class="btn btn-default pull-right " href="{{ path('fos_user_profile_show') }}">Cancelar</a>#}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+
+{% block javascripts %}
+<script>
+    $(document).ready(function(){
+        $("#usuario_fechanacimiento_day").addClass("form-control");
+        $("#usuario_fechanacimiento_month").addClass("form-control");
+        $("#usuario_fechanacimiento_year").addClass("form-control");
+
+        $("#usuario_fechanacimiento_day").css("width", "80px");
+        $("#usuario_fechanacimiento_month").css("width", "80px");
+        $("#usuario_fechanacimiento_year").css("width", "80px");
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,16 @@
+fos_user:
+    db_driver: orm
+    user_class: App\Entity\Usuario
+    firewall_name: main
+    from_email:
+        address: jorge.caso@sattelital.com.pe
+        sender_name: jorgecaso
+
+    service:
+        mailer: fos_user.mailer.twig_swift
+
+    registration:
+        confirmation:
+            enabled: true
+
+

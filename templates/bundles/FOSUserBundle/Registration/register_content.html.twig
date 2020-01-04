@@ -1,0 +1,36 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+    {#{{ form_widget(form) }}
+    <div>
+        <input type="submit" value="{{ 'registration.submit'|trans }}" />
+    </div>#}
+
+    <div class="form-group">
+        {{ form_label(form.email, 'Correo electrónico', {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+        <span class="help-block">{{ form_errors(form.email) }}</span>
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.username, 'Nombre de usuario', {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
+        <span class="help-block">{{ form_errors(form.username) }}</span>
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.plainPassword.first, 'Contraseña', {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
+        <span class="help-block">{{ form_errors(form.plainPassword.first) }}</span>
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.plainPassword.second, 'Repetir contraseña', {'label_attr': {'class': 'control-label'}}) }}
+        {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
+        <span class="help-block">{{ form_errors(form.plainPassword.second) }}</span>
+    </div>
+
+    <div>
+        <input class="btn btn-primary" type="submit" value="{{ 'registration.submit'|trans }}" />
+    </div>
+{{ form_end(form) }}
